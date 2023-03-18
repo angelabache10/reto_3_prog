@@ -1,0 +1,178 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  margin: 0;
+}
+
+.badge.badge-5 {
+  font-size: 1.5rem;
+}
+
+.badge.badge-4 {
+  font-size: 1.25rem;
+}
+
+.badge.badge-3 {
+  font-size: 1rem;
+}
+
+.badge.badge-2 {
+  font-size: 0.75rem;
+}
+
+.badge.badge-1 {
+  font-size: 0.5rem;
+}
+
+.gap-5 {
+  gap: 1.5rem;
+}
+
+.gap-4 {
+  gap: 1.25rem;
+}
+
+.gap-3 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 0.75rem;
+}
+
+.gap-1 {
+  gap: 0.5rem;
+}
+
+.user-panel img {
+  height: 2.1rem;
+  object-fit: cover;
+}
+
+.img-size-50 {
+  height: 50px;
+}
+
+.navbar-icon {
+  font-size: 1.2rem;
+}
+
+.navbar-icon + * {
+  font-size: .8rem;
+  top: 0.25rem;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 1rem auto;
+  background-color: #555;
+}
+
+.user-panel .image img {
+  width: 45px;
+  height: 45px;
+}
+
+.img-cover {
+  object-fit: cover;
+}
+
+.select-icon {
+  right: 1rem;
+  top: calc(50% - 0.5rem);
+}
+
+span.fas,
+span.far,
+span.fab,
+.btn * {
+  pointer-events: none;
+}
+
+.footer-img {
+  top: calc(50% - 20px);
+}
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  column-gap: 0.5rem;
+}
+
+.fa-asterisk.text-danger {
+  font-size: 0.5rem;
+}
+
+.pagination-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-container .pagination {
+  margin-bottom: 0;
+}
+
+.empty-container {
+  height: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty {
+  font-size: 2rem;  
+  color: rgba(131, 158, 170, 0.4);
+  text-align: center;
+}
+
+.callout.callout-primary {
+  border-left-color: #007bff;
+}
+
+.callout a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+}
+
+.create-box {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-card {
+  width: 90%;
+}
+
+.custom-file-label::after {
+  content: 'Seleccionar...';
+}
+
+@media screen and (min-width: 576px) {
+  .create-card {
+    width: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .bar form {
+    width: 50%;
+  }
+
+  .empty {
+    font-size: 2.3rem;
+  }
+}

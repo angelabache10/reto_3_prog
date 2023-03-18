@@ -2,10 +2,21 @@
 
 namespace App\Providers;
 
+use App\Events\ClubEvent;
+use App\Events\CourseEvent;
+use App\Events\EnrollmentEvent;
+use App\Events\LoanEvent;
+use App\Events\PaymentEvent;
+use App\Listeners\ClubListener;
+use App\Listeners\CourseListener;
+use App\Listeners\EnrollmentListener;
+use App\Listeners\LoanListener;
+use App\Listeners\PaymentListener;
+use App\Models\Enrollment;
+use App\Observers\EnrollmentObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -18,6 +29,21 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        PaymentEvent::class => [
+            PaymentListener::class,
+        ],
+        LoanEvent::class => [
+            LoanListener::class,
+        ],
+        EnrollmentEvent::class => [
+            EnrollmentListener::class,
+        ],
+        CourseEvent::class => [
+            CourseListener::class,
+        ],
+        ClubEvent::class => [
+            ClubListener::class,
+        ],
     ];
 
     /**
@@ -27,6 +53,6 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Enrollment::observe(EnrollmentObserver::class);
     }
 }

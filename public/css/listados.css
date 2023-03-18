@@ -1,0 +1,33 @@
+.list-top {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0.25rem 0.25rem 0 0;
+  border-width: 1px;
+  padding: 8px 20px;
+}
+
+.list-top > .title-wrapper {
+  text-align: center;
+}
+
+.list-bottom {
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.list-bottom th {
+  border-top-width: 2px;
+  border-top-style: solid;
+}
+
+@media screen and (min-width: 768px) {
+  .list-top {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .list-top > .title-wrapper {
+    text-align: initial;
+  }
+}

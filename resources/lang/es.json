@@ -1,0 +1,6 @@
+{
+  "The :attribute must contain at least one letter.": "La contraseña ingresada no es válida.",
+  "The :attribute must contain at least one uppercase and one lowercase letter.": "La contraseña ingresada no es válida.",
+  "The :attribute must contain at least one number.": "La contraseña ingresada no es válida.",
+  "The :attribute must contain at least one symbol.": "La contraseña ingresada no es válida."
+}

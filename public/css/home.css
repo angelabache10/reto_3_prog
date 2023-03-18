@@ -1,0 +1,78 @@
+.carousel-item > img {
+  height: 14rem;
+  object-fit: cover;
+  border-radius: .2rem;
+}
+
+.carousel-indicators > li {
+  height: .7rem;
+  width: .7rem;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+.course-info {
+  position: absolute;
+  right: 45%;
+  bottom: 17%;
+  left: 10%;
+  color: rgb(132, 144, 158);
+  background-color: rgba(235, 235, 235, 0.8);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  width: 3rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.course-info a {
+  text-align: center;
+  color: black;
+}
+
+.cards-grid img {
+  height: 12rem;
+  object-fit: cover;
+}
+
+.callout-secondary {
+  border-left-color: rgb(161, 161, 161);
+}
+
+.bienvenido {
+  height: 4.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-container {
+  height: 11.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty {
+  font-size: 2rem;  
+  color: rgba(131, 158, 170, 0.4);
+  text-align: center;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .carousel-item > img {
+    height: 19rem;
+  } 
+}

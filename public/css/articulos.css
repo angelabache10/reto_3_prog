@@ -1,0 +1,10 @@
+.info-box {
+  transition-timing-function: linear;
+  transition-duration: 0.1s;
+  transition-property: background;
+  cursor: pointer;
+}
+
+.info-box:hover {
+  background-color: #eee;
+}

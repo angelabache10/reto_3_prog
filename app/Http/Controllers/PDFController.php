@@ -13,20 +13,6 @@ use Illuminate\Http\Request;
 
 class PDFController extends Controller
 {
-    public function enrollment(Enrollment $enrollment)
-    {
-        $this->authorize('pdf.enrollment', $enrollment);
-
-        return $this->generatePDF([
-            'view' => 'enrollment',
-            'landscape' => false,
-            'filename' => "{$enrollment->student->full_name} - Planilla de Inscripción.pdf",
-            'student' => $enrollment->student,
-            'course' => $enrollment->course,
-            'expires' => $enrollment->course->end_ins->format(DF),
-        ]);
-    }
-
     public function enrollments(Request $request)
     {
         $course = Course::with('instructor')
@@ -40,23 +26,9 @@ class PDFController extends Controller
 
         return $this->generatePDF([
             'view' => 'enrollments',
-            'filename' => "{$course->name} - Matrícula.pdf",
+            'filename' => "ReportePDFMatrículaSistemaVinculaciónSocial.pdf",
             'enrollments' => $enrollments,
             'course' => $course,
-        ]);
-    }
-
-    public function payments()
-    {
-        $this->authorize('role', 'Administrador');
-
-        $payments = Payment::with('enrollment.course', 'enrollment.student')
-            ->get();
-        
-        return $this->generatePDF([
-            'view' => 'payments',
-            'filename' => 'Reporte de Pagos - Vinculación Social.pdf',
-            'payments' => $payments,
         ]);
     }
 
@@ -71,21 +43,8 @@ class PDFController extends Controller
         
         return $this->generatePDF([
             'view' => 'items',
-            'filename' => 'Estado de Inventario - Vinculación Social.pdf',
+            'filename' => 'ReportePDFInventarioSistemaVinculaciónSocial.pdf',
             'items' => $items,
-        ]);
-    }
-
-    public function certificate(Enrollment $enrollment)
-    {
-        $this->authorize('pdf.certificate', $enrollment);
-
-        return $this->generatePDF([
-            'view' => 'certificate',
-            'filename' => "{$enrollment->student->full_name} - Certificado de Aprobación.pdf",
-            'student' => $enrollment->student,
-            'course' => $enrollment->course,
-            'bg' => base64('img/certificate-bg.png'),
         ]);
     }
 
@@ -102,7 +61,7 @@ class PDFController extends Controller
         
         return $this->generatePDF([
             'view' => 'memberships',
-            'filename' => "{$club->name} - Miembros.pdf",
+            'filename' => "ReportePDFMiembrosSistemaVinculaciónSocial.pdf",
             'memberships' => $memberships,
             'club' => $club,
         ]);

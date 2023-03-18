@@ -1,0 +1,39 @@
+.login-page, .register-page {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  min-height: 100vh!important;
+  height: auto;
+}
+
+.title-shadow {
+  text-shadow: 0 0 6px black;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.logo-container {
+  height: 90px;
+  width: 90px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+}
+
+span.fas,
+span.far,
+span.fab,
+.btn * {
+  pointer-events: none;
+}
+
+.fa-asterisk.text-danger {
+  font-size: 0.75rem;
+}
